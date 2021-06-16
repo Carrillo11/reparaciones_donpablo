@@ -1,0 +1,24 @@
+/* 
+Estilos del contenedor del footer de los enlaces
+y el footer del copyright
+*/
+
+.footer-contenedor {
+    background: #2F99FF;
+}
+
+/* Estilos del footer de los enlaces */
+
+.footer {
+    padding: 1.7em 0;
+}
+
+
+
+/* Estilos del footer del copyright */
+
+.copyright {
+    background: #157EE3;
+    color: #F2F2F2;
+    padding: 1em;
+}

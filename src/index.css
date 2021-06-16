@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #F2F2F2;
+  margin: 0;
+  font-family: 'Roboto',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/************************************
+ESTILOS GENERALES - TODAS LAS PÁGINAS
+*************************************/
+
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #543A12;
+  font-size: 1.75em;
+  margin: 1.5em 0;
+  text-transform: uppercase;
+}
+
+.contenedor-info {
+  max-height: 375px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.contenedor-info img {
+  position: relative;
+  width: 100%;
+}
+
+.contenedor-info .info {
+  background: rgba(242, 242, 242, .7);
+  font-weight: bold;
+  padding: .5em;
+  text-align: center;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.contenedor-info .info h2 {
+  border-bottom: 2px solid #543A12;
+  color: #543A12;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+
+
+/***************************************
+ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
+****************************************/
+
+/* Encabezados para login y registro */
+
+.header-login-registro {
+  background: #2F99FF;
+  text-align: left;
+}
+
+.header-login-registro figure {
+  margin: 0;
+}
+
+.header-login-registro figure img {
+  cursor: pointer;
+  margin: 1em;
+  width: 200px;
+}
+
+/* Elementos de la pagina */
+
+.InicioSesion,
+.Registro {
+  margin-bottom: 1.5em;
+}
+
+.form-cuenta,
+.existencia-cuenta {
+  border-bottom: 3px solid #D9D9D9;
+  margin: 0 auto;
+
+  max-width: 400px;
+  width: 95%;
+}
+
+.form-cuenta .grupo-inputs {
+  background: #FFFFFF;
+  border: 2px solid #D9D9D9;
+  margin-bottom: 2em;
+  padding: 1em 0;
+}
+
+.form-cuenta .grupo-inputs h3 {
+  color: #543A12;
+  font-size: 1.3em;
+  margin: 0 auto .5em auto;
+  text-align: left;
+  width: 80%;
+}
+
+.form-cuenta .grupo-inputs input {
+  border: none;
+  border-bottom: 2px solid #2F99FF;
+  color: #2F99FF;
+  font-size: 1em;
+  font-weight: bold;
+  margin: .75em 0;
+  outline: none;
+  padding: .75em;
+  width: 80%;
+}
+
+.form-cuenta .grupo-inputs input:focus {
+  border-color: #212121;
+}
+
+.form-cuenta > input {
+  margin-bottom: 2em;
+}
+
+.form-cuenta label {
+  font-weight: bold;
+}
+
+.form-cuenta .botonIniciarSesion,
+.form-cuenta .botonRegistrarse,
+.existencia-cuenta .botonIrRegistro,
+.existencia-cuenta .botonIrInicioSesion {
+  background: #2F99FF;
+  border: 3px solid #2F99FF;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 2em;
+  padding: .75em 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.form-cuenta .botonIniciarSesion:hover {
+  background: #2F99FF;
+}
+
+.form-cuenta .botonGoogle {
+  background: #F2F2F2;
+  border: 3px solid #2C9331;
+  color: #2C9331;
+}
+
+.form-cuenta .botonGoogle:hover {
+  background: #FFFFFF;
+}
+
+.form-cuenta .botonGoogle i {
+  font-size: 1.3em;
+}
+
+.existencia-cuenta {
+  color: #606060;
+  border: none;
+  font-weight: bold;
+}
+
+.existencia-cuenta .botonIrRegistro,
+.existencia-cuenta .botonIrInicioSesion {
+  border: 3px solid #2F99FF;
+  background: #F2F2F2;
+  color: #2F99FF;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+.existencia-cuenta .botonIrRegistro:hover,
+.existencia-cuenta .botonIrInicioSesion:hover {
+  background: #FFFFFF;
+}
+
+
