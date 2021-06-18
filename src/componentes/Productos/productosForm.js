@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import Swal from "sweetalert2";
+import PDF from './PDF';
+import { set } from "object-path";
 
 const ProductosForm = (props) => {
   
@@ -56,7 +58,7 @@ const ProductosForm = (props) => {
   }, [props.currentId]);
 
   return (
-    <form onSubmit={handleSubmit} className="card card-body border-primary">
+    <form onSubmit={handleSubmit} className="card card-body border-primary" method='Post'>
       
       <div className="form-group input-group">
         <div className="input-group-text bg-light">
@@ -119,11 +121,13 @@ const ProductosForm = (props) => {
         </select>
       </div>
       
+     <PDF nombre={values.nombre} descripcion={values.descripcion} estado={values.estado}/>
      
       <button className="btn btn-primary btn-block">
         {props.currentId === "" ? "Guardar" : "Actualizar"}
       </button>
     </form>
+    
   );
 };
 
