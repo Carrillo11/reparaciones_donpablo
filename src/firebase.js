@@ -2,13 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAlkQ0AjByYoDeXUMqdfDJwcCFBG439CrE",
-    authDomain: "pupuseria-serpas.firebaseapp.com",
-    databaseURL: "https://pupuseria-serpas.firebaseio.com",
-    projectId: "pupuseria-serpas",
-    storageBucket: "pupuseria-serpas.appspot.com",
-    messagingSenderId: "789582476029",
-    appId: "1:789582476029:web:841a0745bcd21c9e368494"
+    apiKey: "AIzaSyApchnq0gDmgMdt4ixwx8FDjlnBX4mt8mM",
+    authDomain: "donpablo-1edd6.firebaseapp.com",
+    databaseURL: "https://donpablo-1edd6-default-rtdb.firebaseio.com",
+    projectId: "donpablo-1edd6",
+    storageBucket: "donpablo-1edd6.appspot.com",
+    messagingSenderId: "975042208329",
+    appId: "1:975042208329:web:e0909573484a75a3305598"
 }
 
 // Initialize Firebase
