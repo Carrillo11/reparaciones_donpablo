@@ -65,9 +65,11 @@ const Productos = () => {
           <table class="table table-hover">
             <thead>
               <tr>
-                <th>Nombre</th>
+                <th>Cliente</th>
+                <th>Estilo</th>                
                 <th>Descripcion</th>
                 <th>Precio</th>
+                <th>Estado</th>
                 <th>Aciones</th>
               </tr>
             </thead>
@@ -75,8 +77,10 @@ const Productos = () => {
               {Productos.map((Producto) => (
                 <tr key={Producto.id}>
                   <td>{Producto.nombre}</td>
+                  <td>{Producto.estilo}</td>
                   <td>{Producto.descripcion}</td>
                   <td>{Producto.precio}</td>
+                  <td>{Producto.estado}</td>
                   <td>
                     <button className="btn btn-primary" onClick={() => setCurrentId(Producto.id)}>Editar</button>
                     &nbsp;
