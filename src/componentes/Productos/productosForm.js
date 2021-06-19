@@ -121,7 +121,7 @@ const ProductosForm = (props) => {
         </select>
       </div>
       
-     <PDF nombre={values.nombre} descripcion={values.descripcion} estado={values.estado}/>
+     <PDF nombre={values.nombre} descripcion={values.descripcion} estado={values.estado} precio={values.precio}/>
      
       <button className="btn btn-primary btn-block">
         {props.currentId === "" ? "Guardar" : "Actualizar"}

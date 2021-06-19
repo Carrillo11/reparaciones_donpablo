@@ -23,6 +23,8 @@ const PDF = (props) => {
 
                 <td>Estado</td>
 
+                <td>Total</td>
+
             </tr>
 
             <tr>
@@ -32,6 +34,8 @@ const PDF = (props) => {
                 <td>{props.descripcion}</td>
 
                 <td>{props.estado}</td>
+
+                <td>{props.precio}</td>
 
             </tr>
 
