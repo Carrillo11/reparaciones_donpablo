@@ -10,22 +10,6 @@ import logo from './../img/logo1.png';
 function BarraNav() {
     let { user, handleLogOut } = useContext(UserContext);
 
-    const cambioMenu = () => {
-        const menu = document.getElementById('navMenu'),
-              boton = document.getElementById('botonMenu'); 
-        
-        menu.classList.toggle('menu-activo');
-
-        if(boton.classList.contains('la-bars')) {
-            boton.classList.remove('la-bars');
-            boton.classList.add('la-times');
-        }
-        else {
-            boton.classList.remove('la-times');
-            boton.classList.add('la-bars');
-        }
-    }
-
     const cambioMenuUsuario = () => {
         const menuUsuario = document.getElementById('navMenuUsuario');
         
@@ -38,6 +22,7 @@ function BarraNav() {
                 <figure>
                     <Link to="/"><img src={logo} alt="Logo" title="Logotipo Reparaciones Don Pablo" /></Link>
                 </figure>
+                
             </nav>
             <nav className="navbar-usuario">
                 <figure onClick={() => cambioMenuUsuario()}>

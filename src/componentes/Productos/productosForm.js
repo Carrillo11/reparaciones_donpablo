@@ -1,15 +1,18 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import Swal from "sweetalert2";
+import PDF from './PDF';
+import { set } from "object-path";
 
 const ProductosForm = (props) => {
   
   
   const initialStateValues = {
     nombre: "",
+    estilo: "",
     descripcion: "",
     precio: "",
-    cantidad: 1,
+    estado: "",
   };
 
   const [values, setValues] = useState(initialStateValues);
@@ -23,7 +26,7 @@ const ProductosForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(values.nombre != "" && values.descripcion != "" && values.precio !=""){
+    if(values.nombre !== "" && values.estilo !== "" && values.descripcion !== "" && values.precio !=="" && values.estado !==""){
 
     props.addOrEditProducto(values);
     setValues({ ...initialStateValues });
@@ -46,14 +49,16 @@ const ProductosForm = (props) => {
     if (props.currentId === "") {
       setValues({ ...initialStateValues });
     } else {
+      //https://stackoverflow.com/questions/56059127/how-to-fix-this-error-function-collectionreference-doc
       if (props.currentId !== null && props.currentId !== undefined) {
         getProductoById(props.currentId);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.currentId]);
 
   return (
-    <form onSubmit={handleSubmit} className="card card-body border-primary">
+    <form onSubmit={handleSubmit} className="card card-body border-primary" method='Post'>
       
       <div className="form-group input-group">
         <div className="input-group-text bg-light">
@@ -62,11 +67,22 @@ const ProductosForm = (props) => {
         <input
           type="text"
           className="form-control"
-          placeholder="Ingrese nombre del producto"
+          placeholder="Ingrese nombre del Cliente"
           value={values.nombre }
           name="nombre"
           onChange={handleInputChange}
         />
+        </div>
+        <div className="form-group input-group">
+        <div className="input-group-text bg-light">
+        <i class="las la-city"></i>
+        </div>
+           <select className='form-control'  name = "estilo" value={values.estilo} onChange={handleInputChange}>
+          <option >..selecciona el estilo</option>
+          <option >Casual</option>
+          <option >Deportivo</option>
+          <option >Botines</option>
+        </select>
       </div>
       <div className="form-group input-group">
         <div className="input-group-text bg-light">
@@ -94,16 +110,24 @@ const ProductosForm = (props) => {
           onChange={handleInputChange}
         />
       </div>
-      <div className="form-group input-group">
-        </div>
         <div className="form-group input-group">
         <div className="input-group-text bg-light">
+        <i class="las la-city"></i>
         </div>
+           <select className='form-control'  name = "estado" value={values.estado} onChange={handleInputChange}>
+          <option >..selecciona el estado</option>
+          <option >Pagado</option>
+          <option >Pendiente</option>
+        </select>
       </div>
+      
+     <PDF nombre={values.nombre} descripcion={values.descripcion} estado={values.estado}/>
+     
       <button className="btn btn-primary btn-block">
         {props.currentId === "" ? "Guardar" : "Actualizar"}
       </button>
     </form>
+    
   );
 };
 

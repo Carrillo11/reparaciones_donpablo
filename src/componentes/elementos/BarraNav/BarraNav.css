@@ -127,3 +127,7 @@ ul.menu-usuario-activo {
         display: inline-block;
     }
 }
+
+.tabla {
+    text-align: center;
+}

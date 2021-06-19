@@ -24,7 +24,7 @@ import Registro from './Registro';
 
 // class App extends React.Component {
 function RouterPage() {
-    let { user, load, carrito } = useContext(UserContext);
+    let { user, load} = useContext(UserContext);
 
     return (
         <Router>

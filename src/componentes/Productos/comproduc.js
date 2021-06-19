@@ -22,3 +22,4 @@ function comproduc() {
 }
 
 export default comproduc;
+
